@@ -9,7 +9,7 @@ npm run check
 SITE_RELEASE="$(date -u +%Y%m%dT%H%M%SZ)-$(git rev-parse --short HEAD)"
 SITE_PACKAGE="$(mktemp -d)"
 trap 'rm -rf "$SITE_PACKAGE"' EXIT
-tar -czf "$SITE_PACKAGE/site.tgz" -C dist .
+COPYFILE_DISABLE=1 tar --no-xattrs -czf "$SITE_PACKAGE/site.tgz" -C dist .
 scp "$SITE_PACKAGE/site.tgz" "$SITE_HOST:/tmp/kotopad-$SITE_RELEASE.tgz"
 scp deploy/nginx.conf deploy/nginx-http.conf "$SITE_HOST:/var/www/kotopad/"
 ssh "$SITE_HOST" bash -s -- "$SITE_RELEASE" <<'REMOTE'
@@ -64,6 +64,6 @@ chmod 755 /etc/letsencrypt/renewal-hooks/deploy/kotopad-nginx-reload
 systemctl reload nginx
 printf 'Live release: %s\nPrevious release: %s\n' "$release" "$old_release"
 REMOTE
-curl --fail --silent --show-error --output /dev/null https://kotopad.fun/
-curl --fail --silent --show-error --output /dev/null https://kotopad.fun/privacy/
+curl --fail --location --max-redirs 5 --retry 3 --retry-all-errors --silent --show-error --output /dev/null https://kotopad.fun/
+curl --fail --location --max-redirs 5 --retry 3 --retry-all-errors --silent --show-error --output /dev/null https://kotopad.fun/privacy/
 printf 'Deployed and verified: https://kotopad.fun\n'

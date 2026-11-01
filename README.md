@@ -4,13 +4,13 @@
 
 ## Адреса для App Store
 
-| Поле | Русский | English |
-| --- | --- | --- |
-| Marketing URL | https://kotopad.fun/ | https://kotopad.fun/en/ |
-| Support URL | https://kotopad.fun/support/ | https://kotopad.fun/en/support/ |
-| Privacy Policy URL | https://kotopad.fun/privacy/ | https://kotopad.fun/en/privacy/ |
-| User Privacy Choices URL | https://kotopad.fun/data/ | https://kotopad.fun/en/data/ |
-| Условия | https://kotopad.fun/terms/ | https://kotopad.fun/en/terms/ |
+| Поле                     | Русский                      | English                         |
+| ------------------------ | ---------------------------- | ------------------------------- |
+| Marketing URL            | https://kotopad.fun/         | https://kotopad.fun/en/         |
+| Support URL              | https://kotopad.fun/support/ | https://kotopad.fun/en/support/ |
+| Privacy Policy URL       | https://kotopad.fun/privacy/ | https://kotopad.fun/en/privacy/ |
+| User Privacy Choices URL | https://kotopad.fun/data/    | https://kotopad.fun/en/data/    |
+| Условия                  | https://kotopad.fun/terms/   | https://kotopad.fun/en/terms/   |
 
 Контакт, предоставленный владельцем: `support@denary.store`. Старые GitHub Pages URL `/` и `/privacy.html` сохранены как переходы на новые поддержку и политику. Уже собранная игра продолжит открывать политику.
 
