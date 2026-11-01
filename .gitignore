@@ -1,0 +1,8 @@
+dist/
+.cache/
+.DS_Store
+node_modules/
+*.pem
+*.key
+.env*
+artifacts/
